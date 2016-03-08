@@ -62,7 +62,8 @@ APPS =	aes/aescrypt2$(EXEXT)		aes/crypt_and_hash$(EXEXT)	\
 	ssl/ssl_client1$(EXEXT)		ssl/ssl_client2$(EXEXT)		\
 	ssl/ssl_server$(EXEXT)		ssl/ssl_server2$(EXEXT)		\
 	ssl/ssl_fork_server$(EXEXT)	ssl/mini_client$(EXEXT)		\
-	ssl/ssl_mail_client$(EXEXT)	random/gen_entropy$(EXEXT)	\
+	ssl/ssl_mail_client$(EXEXT)	ssl/pcduino-light$(EXEXT)	\
+	random/gen_entropy$(EXEXT)					\
 	random/gen_random_havege$(EXEXT)				\
 	random/gen_random_ctr_drbg$(EXEXT)				\
 	test/ssl_cert_test$(EXEXT)	test/benchmark$(EXEXT)		\
@@ -204,6 +205,10 @@ ssl/dtls_server$(EXEXT): ssl/dtls_server.c $(DEP)
 ssl/ssl_client1$(EXEXT): ssl/ssl_client1.c $(DEP)
 	echo "  CC    ssl/ssl_client1.c"
 	$(CC) $(LOCAL_CFLAGS) $(CFLAGS) ssl/ssl_client1.c  $(LOCAL_LDFLAGS) $(LDFLAGS) -o $@
+
+ssl/pcduino-light$(EXEXT): ssl/pcduino-light.c $(DEP)
+	echo "  CC    ssl/pcduino-light.c"
+	$(CC) $(LOCAL_CFLAGS) $(CFLAGS) ssl/pcduino-light.c  $(LOCAL_LDFLAGS) $(LDFLAGS) -o $@
 
 ssl/ssl_client2$(EXEXT): ssl/ssl_client2.c $(DEP)
 	echo "  CC    ssl/ssl_client2.c"
