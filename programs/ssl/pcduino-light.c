@@ -44,9 +44,9 @@
 
 /*IoTgo platform*/
 #define SERVER_PORT "443"
-#define SERVER_NAME "120.24.186.52"
-#define API_KEY  "\"1f5d80f1-5229-4e9b-b96b-9ea033c6043d\","
-#define DEVICE_ID "\"0200000001\","
+#define SERVER_NAME "linksprite.io"
+#define API_KEY  "\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\","
+#define DEVICE_ID "\"xxxxxxxxxxx\","
 #define ACTION  "\"query\","
 #define QUERY_PARAM  "[\"light\"]"
 
